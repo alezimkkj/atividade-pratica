@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Cadastro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<section class="coluna">
+<h1>Cadastro</h1>
+<form id="cadastroForm" novalidate>
+<label for="nome">Nome completo</label>
+<input type="text" id="nome" placeholder="Digite seu nome completo" required>
+<span class="erro" id="erroNome"></span>
+
+<label for="email">E-mail institucional</label>
+<input type="email" id="email" placeholder="seunome@escola.edu.br" required>
+<span class="erro" id="erroEmail"></span>
+
+<label for="senha">Senha de acesso</label>
+<input type="password" id="senha" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+<span class="erro" id="erroSenha"></span>
+
+<label for="confirmaSenha">Confirmação de senha</label>
+<input type="password" id="confirmaSenha" placeholder="Repita a senha" required>
+<span class="erro" id="erroConfirma"></span>
+
+<label for="perfil">Perfil técnico</label>
+<select id="perfil" required>
+<option value="">Selecione uma área</option>
+<option value="Redes">Redes</option>
+<option value="Desenvolvimento">Desenvolvimento</option>
+<option value="Suporte">Suporte</option>
+</select>
+<span class="erro" id="erroPerfil"></span>
+
+<div class="termos">
+<input type="checkbox" id="termos">
+<label for="termos">Li e aceito os termos de uso</label>
+</div>
+<span class="erro" id="erroTermos"></span>
+
+<button type="submit">Cadastrar</button>
+</form>
+</section>
+
+<section class="coluna saida">
+<h2>Dados cadastrados</h2>
+<p id="vazio">Nenhum cadastro realizado ainda.</p>
+<div id="painel" class="oculto">
+<p><strong>Nome:</strong> <span id="saidaNome"></span></p>
+<p><strong>E-mail:</strong> <span id="saidaEmail"></span></p>
+<p><strong>Perfil técnico:</strong> <span id="saidaPerfil"></span></p>
+</div>
+<p id="sucesso" class="sucesso oculto">Cadastro realizado com sucesso!</p>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
